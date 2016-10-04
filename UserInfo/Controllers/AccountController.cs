@@ -153,6 +153,7 @@ namespace UserInfo.Controllers
         //
         // GET: /Account/Register
         [HttpGet]
+        [AllowAnonymous]
         public ActionResult Register()
         {
             try
@@ -173,6 +174,7 @@ namespace UserInfo.Controllers
         //
         // POST: /Account/Register
         [HttpPost]
+        [AllowAnonymous]
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> Register(RegisterViewModel model)
         {
